@@ -24,9 +24,9 @@ func convert(incoming:String) -> Int {
 func fact(number:Int) -> Int
 {
     var result = 1
-    for(var i = number - 1; i > 1; i -= 1)
+    for(var i = 1; i <= number; i += 1)
     {
-        result = result * number;
+        result = result * i;
     }
     return result;
 }
@@ -43,9 +43,8 @@ switch next
     case "/": print("Result: \(firstNum / convert(input()))")
     case "%": print("Result: \(firstNum % convert(input()))")
     case "fact": print("Result: \(fact(firstNum))")
-    default: var count = 2
-             var sum = firstNum + convert(next)
-             next = input()
+    default: var count = 1
+             var sum = firstNum
              while(next != "count" && next != "avg")
              {
                 count += 1
